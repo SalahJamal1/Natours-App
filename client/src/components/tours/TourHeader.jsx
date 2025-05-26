@@ -4,7 +4,7 @@ function TourHeader({ tour }) {
     <section className={styles.header}>
       <img
         src={`/img/tours/${tour.imageCover}`}
-        alt=""
+        alt={tour.name}
         className={styles.imageCover}
       />
       <div className={styles.box}>

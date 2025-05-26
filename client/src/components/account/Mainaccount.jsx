@@ -4,8 +4,10 @@ import SideBare from "./SideBare";
 function Mainaccount() {
   return (
     <main className={styles.main}>
-      <SideBare />
-      <Setting />
+      <section className={styles.accountSection}>
+        <SideBare />
+        <Setting />
+      </section>
     </main>
   );
 }

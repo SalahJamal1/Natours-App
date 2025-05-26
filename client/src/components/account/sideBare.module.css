@@ -1,6 +1,5 @@
 .sideBare {
   background-color: #55c57a;
-  width: 30%;
   padding: 5rem 0;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -43,4 +42,10 @@
 .link:first-child {
   border-left: solid 2px #fff;
   display: flex;
+}
+
+@media (max-width: 704px) {
+  .sideBare {
+    display: none;
+  }
 }

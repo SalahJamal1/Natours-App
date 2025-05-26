@@ -1,12 +1,11 @@
 .setting {
   background-color: #fff;
-  width: 60%;
 }
 
 .dataSetting {
   display: flex;
   flex-direction: column;
-  padding: 6rem 15rem;
+  padding: 4rem 6rem;
 }
 .dataSetting:last-child {
   border-top: 2px solid #f2f2f2;
@@ -37,7 +36,7 @@
   border: none;
   outline: none;
   background-color: #f2f2f2;
-  width: 45rem;
+  max-width: 45rem;
   height: 5rem;
   margin-bottom: 2rem;
 }
@@ -78,4 +77,10 @@
   font-size: 2rem;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+@media (max-width: 704px) {
+  .setting {
+    margin-inline: auto;
+  }
 }

@@ -3,13 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin-bottom: 5rem;
 }
 .book {
   background-color: #fff;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  max-width: 100%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
   align-items: center;
   padding: 5rem 3rem;
@@ -23,7 +23,7 @@
 }
 .images img {
   height: 9.9rem;
-  width: 90%;
+  max-width: 90%;
   border-radius: 50%;
   margin-left: -10rem;
   border: solid 3px #fff;
@@ -36,9 +36,8 @@
 }
 .text {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 10px;
 }
 .text h3 {
   color: #55c57a;
@@ -54,13 +53,48 @@
 
 .btns:link,
 .btns:visited {
-  padding: 2rem 3rem;
   border-radius: 35px;
   background-color: #55c57a;
+  padding: 2rem 3rem;
   font-size: 1.5rem;
   color: #fff;
   font-weight: 700;
   cursor: pointer;
-  margin-left: 6rem;
   text-decoration: none;
+}
+
+@media (max-width: 944px) {
+  .book {
+    max-width: 90%;
+    padding-block: 1rem;
+    gap: 2rem;
+  }
+  .btns:link,
+  .btns:visited {
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+  }
+  .text h3 {
+    font-size: 1.5rem;
+  }
+  .text p {
+    font-size: 1.3rem;
+    max-width: 70%;
+  }
+}
+@media (max-width: 704px) {
+  .images {
+    display: none;
+  }
+  .book {
+    flex-direction: column;
+    border-radius: 12px;
+    align-items: center;
+    padding: 3rem 1rem;
+    max-width: 70%;
+  }
+  .text {
+    align-items: center;
+    justify-content: center;
+  }
 }

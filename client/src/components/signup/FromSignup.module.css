@@ -1,11 +1,12 @@
 .form {
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   padding: 5rem 4rem;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 255, 255, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  width: 70%;
+  max-width: 65rem;
+  margin-inline: auto;
 }
 
 .forms {
@@ -56,4 +57,13 @@
   font-weight: 700;
   cursor: pointer;
   width: 15rem;
+}
+
+@media (max-width: 544px) {
+  .forms {
+    grid-template-columns: 1fr;
+  }
+  .form {
+    max-width: 95%;
+  }
 }

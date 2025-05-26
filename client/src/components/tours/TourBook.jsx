@@ -26,20 +26,18 @@ function TourBook({ tour }) {
           ))}
         </div>
         <div className={styles.text}>
-          <div className="">
-            <h3>WHAT ARE YOU WAITING FOR?</h3>
-            <p>10 days. 1 adventure. Infinite memories. Make it yours today!</p>
-          </div>
-          {user ? (
-            <Link className={styles.btns} onClick={handelbook}>
-              Book tour!
-            </Link>
-          ) : (
-            <Link to="/login" className={styles.btns}>
-              Login to Book tour!
-            </Link>
-          )}
+          <h3>WHAT ARE YOU WAITING FOR?</h3>
+          <p>10 days. 1 adventure. Infinite memories. Make it yours today!</p>
         </div>
+        {user ? (
+          <Link className={styles.btns} onClick={handelbook}>
+            Book tour!
+          </Link>
+        ) : (
+          <Link to="/login" className={styles.btns}>
+            Login to Book tour!
+          </Link>
+        )}
       </div>
     </section>
   );

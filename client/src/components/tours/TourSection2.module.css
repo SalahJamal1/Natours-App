@@ -79,3 +79,21 @@
   line-height: 1.5;
   width: 80%;
 }
+
+@media (max-width: 944px) {
+  .section2 {
+    grid-template-columns: 1fr;
+  }
+  .setion_2_descriptions {
+    padding: 1;
+    align-items: center;
+  }
+}
+@media (max-width: 544px) {
+  .setion_2_descriptions p {
+    font-size: 1.2rem;
+  }
+  .heading {
+    font-size: 1.5rem;
+  }
+}

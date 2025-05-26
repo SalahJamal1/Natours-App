@@ -1,7 +1,22 @@
 .main {
-  min-height: 75vh;
   background-color: #f7f7f7f7;
-  display: flex;
-  width: 100%;
-  padding: 5rem 10rem;
+}
+
+.accountSection {
+  padding: 5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .accountSection {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 704px) {
+  .accountSection {
+    grid-template-columns: 1fr;
+  }
 }

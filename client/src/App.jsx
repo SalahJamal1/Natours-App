@@ -3,9 +3,8 @@ import { Suspense, lazy } from "react";
 import Loader from "./ui/Loader";
 import Account from "./pages/Account";
 import ProtectPage from "./pages/ProtectPage";
-import { Getcurrent } from "./hooks/Getcurrent";
-const ResetPassword = lazy(() => import("./pages/ResetPassword"));
-const Forgetpassword = lazy(() => import("./pages/Forgetpassword"));
+import { FetchCurrentUser } from "./hooks/FetchCurrentUser";
+
 const Overview = lazy(() => import("./pages/Overview"));
 const Pagenotfound = lazy(() => import("./pages/Pagenotfound"));
 const Login = lazy(() => import("./pages/Login"));
@@ -37,24 +36,15 @@ const router = createBrowserRouter([
       </ProtectPage>
     ),
   },
-  // {
-  //   path: "/forgetpassword",
-  //   element: <Forgetpassword />,
-  // },
-  // {
-  //   path: "/restpassword/:id",
-  //   element: <ResetPassword />,
-  // },
   {
     path: "*",
     element: <Pagenotfound />,
   },
 ]);
 function App() {
-  Getcurrent();
-
   return (
     <Suspense fallback={<Loader />}>
+      <FetchCurrentUser />
       <RouterProvider router={router} />
     </Suspense>
   );

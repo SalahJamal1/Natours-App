@@ -1,8 +1,6 @@
 .main_cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  column-gap: 5rem;
-  padding: 0 5rem;
-  max-width: 120rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
 }

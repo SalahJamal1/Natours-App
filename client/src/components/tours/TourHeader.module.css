@@ -17,13 +17,11 @@
   position: absolute;
   top: 20%;
   right: 50%;
-  transform: translate(50%, 70%);
-  /* opacity: 0.85; */
+  transform: translate(57%, 70%);
 }
 .heading {
   color: #fff;
   font-size: 2rem;
-  width: 80%;
   margin-bottom: 2rem;
   border-radius: 6px;
   text-align: center;

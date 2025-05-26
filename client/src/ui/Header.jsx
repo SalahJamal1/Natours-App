@@ -17,9 +17,7 @@ function Header({ Searchtour, setSearchtour }) {
     <header className="header">
       <nav className="nav">
         <div className="se">
-          <Link to="/" className="nav_heading">
-            ALL Tours
-          </Link>
+          <span className="nav_heading">ALL Tours</span>
           <input
             type="text"
             className="search"
@@ -28,7 +26,9 @@ function Header({ Searchtour, setSearchtour }) {
             onChange={(e) => setSearchtour(e.target.value)}
           />
         </div>
-        <img src="/img/logo-white.png" alt="logo" className="logo" />
+        <Link to="/">
+          <img src="/img/logo-white.png" alt="logo" className="logo" />
+        </Link>
         <ul className="nav_list">
           {user ? (
             <>

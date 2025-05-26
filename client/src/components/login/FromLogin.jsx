@@ -25,40 +25,46 @@ function FromLogin() {
   );
 
   return (
-    <form className={styles.form} onSubmit={handelLogin}>
-      <h1 className={styles.form_heading}>LOG INTO YOUR ACCOUNT</h1>
-      {error && <p className="errors">{error.response.data.message}</p>}
-      <label className={styles.form_label} htmlFor="email">
-        Email address
-      </label>
-      <input
-        className={styles.form_input}
-        type="email"
-        name="email"
-        id="email"
-        placeholder="exampel@io.com"
-        required
-        value={email}
-        onChange={(e) => setemail(e.target.value)}
-      />
-      <label className={styles.form_label} htmlFor="password">
-        Password
-      </label>
-      <input
-        className={styles.form_input}
-        type="password"
-        placeholder="*********"
-        name="password"
-        id="password"
-        required
-        value={password}
-        onChange={(e) => setpassword(e.target.value)}
-      />
-      <div className={styles.btns}>
-        <button className={styles.btn}>LOGIN</button>
-        {/* <Link to="/forgetpassword">Forget your password</Link> */}
-      </div>
-    </form>
+    <section
+      style={{
+        padding: "4.6rem 2rem",
+      }}
+    >
+      <form className={styles.form} onSubmit={handelLogin}>
+        <h1 className={styles.form_heading}>LOG INTO YOUR ACCOUNT</h1>
+        {error && <p className="errors">{error.response.data.message}</p>}
+        <label className={styles.form_label} htmlFor="email">
+          Email address
+        </label>
+        <input
+          className={styles.form_input}
+          type="email"
+          name="email"
+          id="email"
+          placeholder="exampel@io.com"
+          required
+          value={email}
+          onChange={(e) => setemail(e.target.value)}
+        />
+        <label className={styles.form_label} htmlFor="password">
+          Password
+        </label>
+        <input
+          className={styles.form_input}
+          type="password"
+          placeholder="*********"
+          name="password"
+          id="password"
+          required
+          value={password}
+          onChange={(e) => setpassword(e.target.value)}
+        />
+        <div className={styles.btns}>
+          <button className={styles.btn}>LOGIN</button>
+          {/* <Link to="/forgetpassword">Forget your password</Link> */}
+        </div>
+      </form>
+    </section>
   );
 }
 

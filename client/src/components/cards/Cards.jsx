@@ -6,11 +6,17 @@ function Cards({ tours, error, isLoading }) {
   if (isLoading) return <Loader />;
   if (error) return <Error error={error} />;
   return (
-    <ul className={styles.main_cards}>
-      {tours.map((tour) => (
-        <Card tour={tour} key={tour.id} />
-      ))}
-    </ul>
+    <section
+      style={{
+        padding: "4.6rem 2rem",
+      }}
+    >
+      <ul className={styles.main_cards}>
+        {tours.map((tour) => (
+          <Card tour={tour} key={tour.id} />
+        ))}
+      </ul>
+    </section>
   );
 }
 
